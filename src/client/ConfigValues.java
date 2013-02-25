@@ -15,7 +15,7 @@ public class ConfigValues {
 						"<c:externalMetadata c:caller=\"SemanticProxy\"/>" +
 						"</c:params>";
 	
-	private static String getParamsXml(){
+	private static String getParameters(){
 		String params = ConfigValues.paramsBase;
 		params = params.replace("${CONTENT_TYPE}", ConfigValues.CONTENT_TYPE);
 		params = params.replace("${OUTPUT_FORMAT}", ConfigValues.OUTPUT_FORMAT);

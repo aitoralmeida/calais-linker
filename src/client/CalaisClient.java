@@ -10,16 +10,6 @@ import org.restlet.resource.ClientResource;
 public class CalaisClient {
 	
 	String TEST_TEXT = "This is a test, my name is Aitor Almeida and I'm in Bilbao, Spain. I'm writing a longer text because the previous one was too short.";
-	StringBuilder parameters = new StringBuilder();
-	
-	public CalaisClient(){
-		parameters.append("<c:params xmlns:c=\"http://s.opencalais.com/1/pred/\"");
-		parameters.append(" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">");
-		parameters.append("<c:processingDirectives c:contentType=\"${CONTENT_TYPE}\" c:outputFormat=\"${OUTPUT_FORMAT}\"></c:processingDirectives>");
-		parameters.append("<c:userDirectives c:allowDistribution=\"true\" c:allowSearch=\"true\" c:externalID=\"17cabs901\" c:submitter=\"${SUBMITTER}\"></c:userDirectives>");
-		parameters.append("<c:externalMetadata c:caller=\"SemanticProxy\"/>");
-		parameters.append("</c:params>");
-	}
 	
 	public void getAnalysis() throws IOException{
 		Form form = new Form();
@@ -40,13 +30,5 @@ public class CalaisClient {
 		}
 	}
 	
-	private String getParamsXml(){
-		String params = this.parameters.toString();
-		params = params.replace("${CONTENT_TYPE}", ConfigValues.CONTENT_TYPE);
-		params = params.replace("${OUTPUT_FORMAT}", ConfigValues.OUTPUT_FORMAT);
-		params = params.replace("${SUBMITTER}", ConfigValues.SUBMITTER);
-		
-		return params;
-	}
 
 }
