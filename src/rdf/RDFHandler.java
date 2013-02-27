@@ -20,7 +20,7 @@ public class RDFHandler {
 	
 	public static String PLACES_SPARQL = "./input/sparql/places.sparql";
 	
-	Vector<QuerySolution> getSparqlOutput(String result, String sparqlQueryFile) throws IOException{
+	Vector<QuerySolution> executeQuery(String result, String sparqlQueryFile) throws IOException{
 		//load the rdf
 		Reader reader = new StringReader(result);
 		Model model = ModelFactory.createMemModelMaker().createDefaultModel();

@@ -24,7 +24,7 @@ public class RDFHandlerTest {
 	public void testGetSparqlOutputTotalTypes() throws Exception {
 		RDFHandler rdf = new RDFHandler();
 		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
-		Vector<QuerySolution> results = rdf.getSparqlOutput(owl, "./input/test/types.sparql");
+		Vector<QuerySolution> results = rdf.executeQuery(owl, "./input/test/types.sparql");
 		/*
 		for (Iterator<QuerySolution> iterator = results.iterator(); iterator.hasNext();) {
 			QuerySolution querySolution = (QuerySolution) iterator.next();
@@ -39,7 +39,7 @@ public class RDFHandlerTest {
 	public void testGetSparqlOutputCities() throws Exception {
 		RDFHandler rdf = new RDFHandler();
 		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
-		Vector<QuerySolution> results = rdf.getSparqlOutput(owl, "./input/sparql/places.sparql");
+		Vector<QuerySolution> results = rdf.executeQuery(owl, "./input/sparql/places.sparql");
 		assertEquals(2, results.size());
 		
 		Set<String> names = new HashSet<String>();
@@ -56,7 +56,7 @@ public class RDFHandlerTest {
 	public void testGetSparqlOutputCompanies() throws Exception {
 		RDFHandler rdf = new RDFHandler();
 		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
-		Vector<QuerySolution> results = rdf.getSparqlOutput(owl, "./input/sparql/companies.sparql");
+		Vector<QuerySolution> results = rdf.executeQuery(owl, "./input/sparql/companies.sparql");
 		assertEquals(1, results.size());
 
 		QuerySolution querySolution = results.get(0);
