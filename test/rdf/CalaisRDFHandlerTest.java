@@ -1,6 +1,7 @@
 package rdf;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -11,18 +12,20 @@ import org.junit.Test;
 
 import com.hp.hpl.jena.query.QuerySolution;
 
-public class RDFHandlerTest {
+import data.City;
+
+public class CalaisRDFHandlerTest {
 
 	@Test
 	public void testReadSparqlFile() throws Exception {
-		RDFHandler rdf = new RDFHandler();
+		CalaisRDFHandler rdf = new CalaisRDFHandler();
 		String result = rdf.readTextFile("./input/test/test1.sparql");
 		assertEquals("12345\n678\n", result);
 	}
 	
 	@Test
 	public void testGetSparqlOutputTotalTypes() throws Exception {
-		RDFHandler rdf = new RDFHandler();
+		CalaisRDFHandler rdf = new CalaisRDFHandler();
 		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
 		Vector<QuerySolution> results = rdf.executeQuery(owl, "./input/test/types.sparql");
 		/*
@@ -37,7 +40,7 @@ public class RDFHandlerTest {
 	
 	@Test
 	public void testGetSparqlOutputCities() throws Exception {
-		RDFHandler rdf = new RDFHandler();
+		CalaisRDFHandler rdf = new CalaisRDFHandler();
 		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
 		Vector<QuerySolution> results = rdf.executeQuery(owl, "./input/sparql/places.sparql");
 		assertEquals(2, results.size());
@@ -54,7 +57,7 @@ public class RDFHandlerTest {
 	
 	@Test
 	public void testGetSparqlOutputCompanies() throws Exception {
-		RDFHandler rdf = new RDFHandler();
+		CalaisRDFHandler rdf = new CalaisRDFHandler();
 		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
 		Vector<QuerySolution> results = rdf.executeQuery(owl, "./input/sparql/companies.sparql");
 		assertEquals(1, results.size());
@@ -64,6 +67,27 @@ public class RDFHandlerTest {
 		assertEquals("IBM",querySolution.getLiteral("shortname").getString());
 		assertEquals("IBM",querySolution.getLiteral("ticker").getString());
 	
+	}
+	
+	@Test
+	public void testGetCities() throws Exception {
+		CalaisRDFHandler rdf = new CalaisRDFHandler();
+		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
+		Vector<City> cities = rdf.getCities(owl);
+		assertEquals(2, cities.size());
+		//London
+		assertEquals("London", cities.get(0).getShortname());
+		assertEquals("London,Greater London,United Kingdom", cities.get(0).getName());
+		assertEquals("-0.106196", cities.get(0).getLongitude());
+		assertEquals("51.517124", cities.get(0).getLatitude());
+		assertEquals("United Kingdom", cities.get(0).getCountry());
+		//Bilbao
+		assertEquals("Bilbao", cities.get(1).getShortname());
+		assertEquals("Bilbao,Biscay,Spain", cities.get(1).getName());
+		assertEquals("-2.9667", cities.get(1).getLongitude());
+		assertEquals("43.25", cities.get(1).getLatitude());
+		assertEquals("Spain", cities.get(1).getCountry());
+				
 	}
 
 
