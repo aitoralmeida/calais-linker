@@ -1,0 +1,12 @@
+PREFIX c:<http://s.opencalais.com/1/pred/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+	
+	SELECT ?name ?shortname ?latitude ?longitude ?type
+	WHERE { 
+		?subject rdf:type ?type .
+		?subject c:name ?name .
+		?subject c:shortname ?shortname .
+		?subject c:latitude ?latitude .
+		?subject c:longitude ?longitude .
+		FILTER regex(str(?type), "^http://s.opencalais.com/1/type/er/Geo*") . 
+	}

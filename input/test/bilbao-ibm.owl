@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:j.0="http://s.opencalais.com/1/type/cat/"
+    xmlns:c="http://s.opencalais.com/1/pred/"
+    xmlns:j.1="http://s.opencalais.com/1/type/er/Geo/"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:j.2="http://s.opencalais.com/1/type/er/"
+    xmlns:j.3="http://s.opencalais.com/1/type/lid/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.4="http://s.opencalais.com/1/type/sys/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns="file:/D:/Proyectos/thofu/SP6/T6.2.2/workspace/Rest-Calais-Linker/input/test/bilbao-ibm.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.5="http://s.opencalais.com/1/type/em/e/"
+  xml:base="file:/D:/Proyectos/thofu/SP6/T6.2.2/workspace/Rest-Calais-Linker/input/test/bilbao-ibm.owl">
+  <owl:Ontology rdf:about="file:/D:/Proyectos/thofu/SP6/T6.2.2/workspace/Rest-Calais-Linker/input/test/bilbao-ibm.owl"/>
+  <j.4:DocInfoMeta rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/meta">
+    <c:docId>
+      <j.4:DocInfo rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2">
+        <c:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >http://id.opencalais.com/tK*ps0u*yCzb9TnGJyYPqw</c:id>
+        <c:docDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2013-02-26 10:32:21.891</c:docDate>
+        <c:document rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >This+is+a+test%2C+my+name+is+Aitor+Almeida+and+I%27m+in+Bilbao%2C+Spain.+I%27m+writing+a+longer+text+because+the+previous+one+was+too+short.+London%2C+IBM</c:document>
+        <c:calaisRequestID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >c9624de9-e0ed-4a6f-13d1-72212674c681</c:calaisRequestID>
+        <c:docTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        ></c:docTitle>
+      </j.4:DocInfo>
+    </c:docId>
+    <c:submissionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2013-02-26 10:32:21.735</c:submissionDate>
+    <c:langIdVer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DefaultLangId</c:langIdVer>
+    <c:processingVer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CalaisJob01</c:processingVer>
+    <c:signature rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >digestalg-1|g5ECijelI3C69mxroJxxv6t1nvw=|SDRlR5jDoQVF2VcjIVd2XRuE6awoyB9bCBDfinpSRSOVzUIIJTErgA==</c:signature>
+    <c:submitterCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >96be405a-4122-6650-985e-03d688a6777d</c:submitterCode>
+    <c:emVer rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >7.1.1103.5</c:emVer>
+    <c:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >English</c:language>
+    <c:contentType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >text/raw</c:contentType>
+  </j.4:DocInfoMeta>
+  <j.2:Company rdf:about="http://d.opencalais.com/er/company/ralg-tr1r/9e3f6c34-aa6b-3a3b-b221-a07aa7933633">
+    <c:subject>
+      <j.5:Company rdf:about="http://d.opencalais.com/comphash-1/7c375e93-de13-3f56-a42d-add43142d9d1">
+        <c:nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >N/A</c:nationality>
+        <c:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >IBM</c:name>
+      </j.5:Company>
+    </c:subject>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+    <c:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IBM.N</c:symbol>
+    <c:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INTERNATIONAL BUSINESS MACHINES CORPORATION</c:name>
+    <c:ticker rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IBM</c:ticker>
+    <c:score rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</c:score>
+    <c:shortname rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IBM</c:shortname>
+  </j.2:Company>
+  <j.1:City rdf:about="http://d.opencalais.com/er/geo/city/ralg-geo1/f08025f6-8e95-c3ff-2909-0a5219ed3bfa">
+    <c:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >51.517124</c:latitude>
+    <c:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >-0.106196</c:longitude>
+    <c:shortname rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >London</c:shortname>
+    <c:subject>
+      <j.5:City rdf:about="http://d.opencalais.com/genericHasher-1/6fda72fd-105c-39ba-bb79-da95785a249f">
+        <c:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >London</c:name>
+      </j.5:City>
+    </c:subject>
+    <c:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >London,Greater London,United Kingdom</c:name>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+    <c:containedbycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >United Kingdom</c:containedbycountry>
+    <c:containedbystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Greater London</c:containedbystate>
+  </j.1:City>
+  <j.4:RelevanceInfo rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/Relevance/3">
+    <c:relevance rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0.667</c:relevance>
+    <c:subject rdf:resource="http://d.opencalais.com/genericHasher-1/6fda72fd-105c-39ba-bb79-da95785a249f"/>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+  </j.4:RelevanceInfo>
+  <j.1:City rdf:about="http://d.opencalais.com/er/geo/city/ralg-geo1/43771fe2-8b2f-0473-1069-83ba2e1ba5d0">
+    <c:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bilbao,Biscay,Spain</c:name>
+    <c:containedbystate rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Biscay</c:containedbystate>
+    <c:shortname rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bilbao</c:shortname>
+    <c:subject>
+      <j.5:City rdf:about="http://d.opencalais.com/genericHasher-1/acf79dc7-0c7b-3008-9a10-dd51b1cb9aa9">
+        <c:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Bilbao</c:name>
+      </j.5:City>
+    </c:subject>
+    <c:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >43.25</c:latitude>
+    <c:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >-2.9667</c:longitude>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+    <c:containedbycountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Spain</c:containedbycountry>
+  </j.1:City>
+  <j.4:InstanceInfo rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/Instance/1">
+    <c:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></c:suffix>
+    <c:subject rdf:resource="http://d.opencalais.com/comphash-1/7c375e93-de13-3f56-a42d-add43142d9d1"/>
+    <c:detection rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >[because+the+previous+one+was+too+short.+London%2C+]IBM[]</c:detection>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+    <c:offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >151</c:offset>
+    <c:prefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >because+the+previous+one+was+too+short.+London%2C+</c:prefix>
+    <c:exact rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IBM</c:exact>
+    <c:length rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3</c:length>
+  </j.4:InstanceInfo>
+  <j.3:DefaultLangId rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/lid/DefaultLangId">
+    <c:lang rdf:resource="http://d.opencalais.com/lid/DefaultLangId/English"/>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+  </j.3:DefaultLangId>
+  <j.4:InstanceInfo rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/Instance/3">
+    <c:offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >141</c:offset>
+    <c:prefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >nger+text+because+the+previous+one+was+too+short.+</c:prefix>
+    <c:length rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >6</c:length>
+    <c:exact rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >London</c:exact>
+    <c:subject rdf:resource="http://d.opencalais.com/genericHasher-1/6fda72fd-105c-39ba-bb79-da95785a249f"/>
+    <c:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >%2C+IBM</c:suffix>
+    <c:detection rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >[nger+text+because+the+previous+one+was+too+short.+]London[%2C+IBM]</c:detection>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+  </j.4:InstanceInfo>
+  <j.4:InstanceInfo rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/Instance/2">
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+    <c:detection rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >[s+a+test%2C+my+name+is+Aitor+Almeida+and+I%27m+in+]Bilbao[%2C+Spain.+I%27m+writing+a+longer+text+because+the]</c:detection>
+    <c:length rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >6</c:length>
+    <c:prefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >s+a+test%2C+my+name+is+Aitor+Almeida+and+I%27m+in+</c:prefix>
+    <c:exact rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bilbao</c:exact>
+    <c:subject rdf:resource="http://d.opencalais.com/genericHasher-1/acf79dc7-0c7b-3008-9a10-dd51b1cb9aa9"/>
+    <c:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >%2C+Spain.+I%27m+writing+a+longer+text+because+the</c:suffix>
+    <c:offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >56</c:offset>
+  </j.4:InstanceInfo>
+  <j.4:RelevanceInfo rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/Relevance/1">
+    <c:subject rdf:resource="http://d.opencalais.com/comphash-1/7c375e93-de13-3f56-a42d-add43142d9d1"/>
+    <c:relevance rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0.667</c:relevance>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+  </j.4:RelevanceInfo>
+  <j.4:RelevanceInfo rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/Relevance/2">
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+    <c:subject rdf:resource="http://d.opencalais.com/genericHasher-1/acf79dc7-0c7b-3008-9a10-dd51b1cb9aa9"/>
+    <c:relevance rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0.667</c:relevance>
+  </j.4:RelevanceInfo>
+  <j.0:DocCat rdf:about="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2/cat/1">
+    <c:category rdf:resource="http://d.opencalais.com/cat/Calais/Technology_Internet"/>
+    <c:classifierName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Calais</c:classifierName>
+    <c:docId rdf:resource="http://d.opencalais.com/dochash-1/32de7ea0-39fa-3f8d-a992-00ca0a0f74a2"/>
+    <c:score rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0.589</c:score>
+    <c:categoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Technology_Internet</c:categoryName>
+  </j.0:DocCat>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->
