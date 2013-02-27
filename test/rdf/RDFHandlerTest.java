@@ -39,7 +39,7 @@ public class RDFHandlerTest {
 	public void testGetSparqlOutputCities() throws Exception {
 		RDFHandler rdf = new RDFHandler();
 		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
-		Vector<QuerySolution> results = rdf.getSparqlOutput(owl, "./input/test/city.sparql");
+		Vector<QuerySolution> results = rdf.getSparqlOutput(owl, "./input/sparql/places.sparql");
 		assertEquals(2, results.size());
 		
 		Set<String> names = new HashSet<String>();
@@ -51,5 +51,20 @@ public class RDFHandlerTest {
 		assertTrue(names.contains("London"));
 		assertTrue(names.contains("Bilbao"));
 	}
+	
+	@Test
+	public void testGetSparqlOutputCompanies() throws Exception {
+		RDFHandler rdf = new RDFHandler();
+		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
+		Vector<QuerySolution> results = rdf.getSparqlOutput(owl, "./input/sparql/companies.sparql");
+		assertEquals(1, results.size());
+
+		QuerySolution querySolution = results.get(0);
+		assertEquals("INTERNATIONAL BUSINESS MACHINES CORPORATION",querySolution.getLiteral("name").getString());
+		assertEquals("IBM",querySolution.getLiteral("shortname").getString());
+		assertEquals("IBM",querySolution.getLiteral("ticker").getString());
+	
+	}
+
 
 }
