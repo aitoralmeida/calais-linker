@@ -16,18 +16,18 @@ public class CalaisClient {
 	
 	public String getAnalysis(String content) throws IOException{
 		Form form = new Form();
-		form.add("licenseID", URLEncoder.encode(ConfigValues.KEY, "UTF-8"));
+		form.add("licenseID", URLEncoder.encode(ConfigValuesCalais.KEY, "UTF-8"));
 		form.add("content", URLEncoder.encode(content, "UTF-8"));
 		//form.add("paramsXML",URLEncoder.encode(ConfigValues.getParameters(), "UTF-8"));
 		
-		ClientResource resource = new ClientResource(ConfigValues.CALAIS_URL);
+		ClientResource resource = new ClientResource(ConfigValuesCalais.CALAIS_URL);
 
+		String response = "";
 		Representation r = resource.post(form.getWebRepresentation());
-
 		if (resource.getStatus().isSuccess()) {
 			System.out.println("Success: " + resource.getStatus().getCode());
 			if (resource.getStatus().getCode() == 200){
-				String response = r.getText();
+				response = r.getText();
 				this.processResponse(response);
 			}
 			
@@ -35,7 +35,6 @@ public class CalaisClient {
 			System.out.println("Fail");
 		}
 		
-		String response = r.getText();
 		return response;
 	}
 	
