@@ -14,5 +14,10 @@ public class GeonamesClientTest {
 		assertTrue(result.contains("United Kingdom"));
 		assertTrue(result.contains("PPLC"));
 	}
+	
+	@Test
+	public void testGetLocationUri() throws Exception{
+		fail("Not implemented");
+	}
 
 }

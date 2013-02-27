@@ -15,7 +15,7 @@ import org.xml.sax.SAXException;
 
 public class GeonamesXMLParser {
 	
-	String getGeonameId(String geonamesResult, String city, String country){
+	public String getGeonameId(String geonamesResult, String city, String country){
 		String result ="";
 		
 		try {
