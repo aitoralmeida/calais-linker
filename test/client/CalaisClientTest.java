@@ -14,5 +14,4 @@ public class CalaisClientTest {
 		String result = client.getAnalysis(test);
 		assertTrue(result.contains(expected));
 	}
-
 }
