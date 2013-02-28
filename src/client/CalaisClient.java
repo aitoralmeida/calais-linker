@@ -1,9 +1,6 @@
 package client;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URLEncoder;
 
 import org.restlet.data.Form;
@@ -25,24 +22,20 @@ public class CalaisClient {
 		String response = "";
 		Representation r = resource.post(form.getWebRepresentation());
 		if (resource.getStatus().isSuccess()) {
-			System.out.println("Success: " + resource.getStatus().getCode());
 			if (resource.getStatus().getCode() == 200){
 				response = r.getText();
-				this.processResponse(response);
-			}
-			
-		} else {
-			System.out.println("Fail");
-		}
+			}			
+		} 
 		
 		return response;
 	}
 	
+	/*
 	private void processResponse(String content){
 		System.out.println(content);
 		this.writeContentToFile(content);		
 	}
-	
+		
 	private void writeContentToFile(String content){
 		String path = "./output/test/outputContent.rdf";
 		File file = new File(path);
@@ -61,5 +54,6 @@ public class CalaisClient {
 		}
 		
 	}
+	*/
 
 }

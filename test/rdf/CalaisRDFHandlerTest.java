@@ -13,6 +13,7 @@ import org.junit.Test;
 import com.hp.hpl.jena.query.QuerySolution;
 
 import data.City;
+import data.Company;
 
 public class CalaisRDFHandlerTest {
 
@@ -86,7 +87,19 @@ public class CalaisRDFHandlerTest {
 		assertEquals("Bilbao,Biscay,Spain", cities.get(1).getName());
 		assertEquals("-2.9667", cities.get(1).getLongitude());
 		assertEquals("43.25", cities.get(1).getLatitude());
-		assertEquals("Spain", cities.get(1).getCountry());
+		assertEquals("Spain", cities.get(1).getCountry());		
+	}
+	
+	@Test
+	public void testGetCCompany() throws Exception {
+		CalaisRDFHandler rdf = new CalaisRDFHandler();
+		String owl = rdf.readTextFile("./input/test/bilbao-ibm.owl");
+		Vector<Company> companies = rdf.getCompanies(owl);
+		assertEquals(1, companies.size());
+		//IBM
+		assertEquals("IBM", companies.get(0).getShortname());
+		assertEquals("INTERNATIONAL BUSINESS MACHINES CORPORATION", companies.get(0).getName());
+		assertEquals("IBM", companies.get(0).getTicker());
 				
 	}
 
