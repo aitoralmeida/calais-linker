@@ -17,7 +17,9 @@ public class GeonamesClientTest {
 	
 	@Test
 	public void testGetLocationUri() throws Exception{
-		fail("Not implemented");
+		GeonamesClient client = new GeonamesClient();
+		String result = client.getLocationUri("London", "United Kingdom");
+		assertEquals("http://sws.geonames.org/2643743/about.rdf", result);
 	}
 
 }

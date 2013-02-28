@@ -6,6 +6,7 @@ public class City {
 	private String country;
 	private String latitude;
 	private String longitude;
+	private String uri;
 	
 	public City(String name, String shortname, String country, String latitude,
 			String longitude) {
@@ -55,6 +56,14 @@ public class City {
 
 	public void setLongitude(String longitude) {
 		this.longitude = longitude;
+	}
+
+	public String getUri() {
+		return uri;
+	}
+
+	public void setUri(String uri) {
+		this.uri = uri;
 	}
 	
 	
