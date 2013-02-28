@@ -30,7 +30,7 @@ public class CalaisLinker {
 		
 		Vector<Company> companies = calaisRdfHandler.getCompanies(calaisRdf);
 		for (Company company : companies) {
-			String resourceUri = dbpediaClient.searchResource(company.getShortname());
+			String resourceUri = dbpediaClient.searchResource(company.getName(), company.getShortname(), company.getTicker());
 			company.setUri(resourceUri);
 		}
 		entities.setCompanies(companies);
