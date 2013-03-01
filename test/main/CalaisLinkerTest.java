@@ -17,29 +17,32 @@ public class CalaisLinkerTest {
 		
 		//London
 		assertEquals("London", entities.getCities().get(0).getShortname());
-		assertEquals("http://sws.geonames.org/2643743/about.rdf", entities.getCities().get(0).getUri());
+		assertEquals("http://sws.geonames.org/2643743/about.rdf", entities.getCities().get(0).getUriGeonames());
+		assertEquals("http://dbpedia.org/resource/London", entities.getCities().get(0).getUriDBPedia());
 		assertEquals("United Kingdom", entities.getCities().get(0).getCountry());
 		//Bilbao
 		assertEquals("Bilbao", entities.getCities().get(1).getShortname());
-		assertEquals("http://sws.geonames.org/3128026/about.rdf", entities.getCities().get(1).getUri());
+		assertEquals("http://sws.geonames.org/3128026/about.rdf", entities.getCities().get(1).getUriGeonames());
+		assertEquals("http://dbpedia.org/resource/Bilbao", entities.getCities().get(1).getUriDBPedia());
 		assertEquals("Spain", entities.getCities().get(1).getCountry());
 		//Beijing
 		assertEquals("Beijing", entities.getCities().get(2).getShortname());
-		assertEquals("http://sws.geonames.org/1816670/about.rdf", entities.getCities().get(2).getUri());
+		assertEquals("http://sws.geonames.org/1816670/about.rdf", entities.getCities().get(2).getUriGeonames());
+		assertEquals("http://dbpedia.org/resource/Beijing", entities.getCities().get(2).getUriDBPedia());
 		assertEquals("China", entities.getCities().get(2).getCountry());
 		
 		//Apple
 		assertEquals("Apple", entities.getCompanies().get(0).getShortname());
 		assertEquals("AAPL", entities.getCompanies().get(0).getTicker());
-		assertEquals("http://dbpedia.org/resource/Apple_Inc", entities.getCompanies().get(0).getUri());
+		assertEquals("http://dbpedia.org/resource/Apple_Inc", entities.getCompanies().get(0).getUriDBPedia());
 		//Google
 		assertEquals("Google", entities.getCompanies().get(1).getShortname());
 		assertEquals("GOOG", entities.getCompanies().get(1).getTicker());
-		assertEquals("http://dbpedia.org/resource/Google", entities.getCompanies().get(1).getUri());
+		assertEquals("http://dbpedia.org/resource/Google", entities.getCompanies().get(1).getUriDBPedia());
 		//IBM
 		assertEquals("IBM", entities.getCompanies().get(2).getShortname());
 		assertEquals("IBM", entities.getCompanies().get(2).getTicker());
-		assertEquals("http://dbpedia.org/resource/IBM", entities.getCompanies().get(2).getUri());
+		assertEquals("http://dbpedia.org/resource/IBM", entities.getCompanies().get(2).getUriDBPedia());
 		
 	}
 

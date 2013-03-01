@@ -6,7 +6,8 @@ public class City {
 	private String country;
 	private String latitude;
 	private String longitude;
-	private String uri;
+	private String uriGeonames;
+	private String uriDBPedia;
 	
 	public City(String name, String shortname, String country, String latitude,
 			String longitude) {
@@ -57,14 +58,22 @@ public class City {
 	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
-
-	public String getUri() {
-		return uri;
+	public String getUriGeonames() {
+		return uriGeonames;
 	}
 
-	public void setUri(String uri) {
-		this.uri = uri;
+	public void setUriGeonames(String uriGeonames) {
+		this.uriGeonames = uriGeonames;
 	}
+
+	public String getUriDBPedia() {
+		return uriDBPedia;
+	}
+
+	public void setUriDBPedia(String uriDBPedia) {
+		this.uriDBPedia = uriDBPedia;
+	}
+	
 	
 	
 

@@ -5,7 +5,7 @@ public class Company {
 	private String name;
 	private String shortname;
 	private String ticker;
-	private String uri;
+	private String uriDBPedia;
 	
 	public Company(String name, String shortname, String ticker) {
 		super();
@@ -38,11 +38,11 @@ public class Company {
 		this.ticker = ticker;
 	}
 
-	public String getUri() {
-		return uri;
+	public String getUriDBPedia() {
+		return uriDBPedia;
 	}
 
-	public void setUri(String uri) {
-		this.uri = uri;
+	public void setUriDBPedia(String uri) {
+		this.uriDBPedia = uri;
 	}
 }

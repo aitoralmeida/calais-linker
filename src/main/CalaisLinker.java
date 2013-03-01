@@ -24,14 +24,17 @@ public class CalaisLinker {
 		Vector<City> cities = calaisRdfHandler.getCities(calaisRdf);
 		for (City city : cities) {
 			String resourceUri = geonamesClient.getLocationUri(city.getShortname(), city.getCountry());
-			city.setUri(resourceUri);
+			city.setUriGeonames(resourceUri);
+			
+			resourceUri = dbpediaClient.searchCityResource(city.getShortname(), city.getCountry());
+			city.setUriDBPedia(resourceUri);
 		}	
 		entities.setCities(cities);
 		
 		Vector<Company> companies = calaisRdfHandler.getCompanies(calaisRdf);
 		for (Company company : companies) {
 			String resourceUri = dbpediaClient.searchCompanyResource(company.getName(), company.getShortname(), company.getTicker());
-			company.setUri(resourceUri);
+			company.setUriDBPedia(resourceUri);
 		}
 		entities.setCompanies(companies);
 		
